@@ -57,9 +57,9 @@ terraform apply
 
 Three main processes:
 
-**Ingestion** 
-  Uses AWS Eventbridge to action ```pg8000``` to read from the Postgres database every three minutes, and ```boto3``` to transfer data into an s3 bucket as .csv files
+**Ingestion**   
+    Uses AWS Eventbridge to action ```pg8000``` to read from the Postgres database every three minutes, and ```boto3``` to transfer data into an s3 bucket as .csv files
 
-**Transform** Takes the data from the .csv files as ```pandas``` dataframes, formats the data according to warehouse table-specifications, and adds this as .parquet files to a second S3 bucket
+**Transform**   Takes the data from the .csv files as ```pandas``` dataframes, formats the data according to warehouse table-specifications, and adds this as .parquet files to a second S3 bucket
 
-**Load** Reads the .parquet files, and inserts the data into a star-schema data warehouse.
+**Load**   Reads the .parquet files, and inserts the data into a star-schema data warehouse.
