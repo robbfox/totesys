@@ -86,4 +86,3 @@ def test_csv_builder():
     builder.write('second\n')
     builder.write('third\n')
     assert builder.as_txt() == 'first\nsecond\nthird\n'
-    
